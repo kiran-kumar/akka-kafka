@@ -136,7 +136,10 @@ object Example {
 
   consumer.commit() //returns a Future[Unit] that completes when all in-flight messages are processed and offsets are committed.
 
+  /* To stop reading data from Kafka, use consumer.stop(). It is commented for the sample program to consume
+  data from kafka for beginners
   consumer.stop()   //returns a Future[Unit] that completes when the connector is stopped.
+  */
 
 }
 ```
@@ -223,7 +226,10 @@ import kafka.serializer.DefaultDecoder
 
   consumer.start()  //returns a Future[Unit] that completes when the connector is started
 
+  /* To stop reading data from Kafka, use consumer.stop(). It is commented for the sample program to consume
+  data from kafka for beginners
   consumer.stop()   //returns a Future[Unit] that completes when the connector is stopped.
+  */
 
 }
 ```
